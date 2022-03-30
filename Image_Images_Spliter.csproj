@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <StartupObject>WpfCustomerService.App</StartupObject>
+    <Nullable>warnings</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\4907157.jpg" />
+    <None Remove="Resources\Amb%284%29.png" />
+    <None Remove="Resources\Amb%288%29.png" />
+    <None Remove="Resources\Free_Sample_By_Wix.jpg" />
+    <None Remove="Resources\Mylogo.png" />
+    <None Remove="Resources\p2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\4907157.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\p2.png" />
+  </ItemGroup>
+
+</Project>

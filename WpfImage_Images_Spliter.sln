@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Image_Images_Spliter", "Image_Images_Spliter.csproj", "{C12F15AF-D47F-4FF3-91E2-F89C2AD32147}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C12F15AF-D47F-4FF3-91E2-F89C2AD32147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C12F15AF-D47F-4FF3-91E2-F89C2AD32147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C12F15AF-D47F-4FF3-91E2-F89C2AD32147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C12F15AF-D47F-4FF3-91E2-F89C2AD32147}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C831AE9E-FAC7-43B6-861B-5AE8FBBEC40C}
+	EndGlobalSection
+EndGlobal
