@@ -16,13 +16,10 @@
     <Optimize>False</Optimize>
   </PropertyGroup>
 
+
+
   <ItemGroup>
-    <None Remove="Resources\4907157.jpg" />
-    <None Remove="Resources\Amb%284%29.png" />
-    <None Remove="Resources\Amb%288%29.png" />
-    <None Remove="Resources\Free_Sample_By_Wix.jpg" />
-    <None Remove="Resources\Mylogo.png" />
-    <None Remove="Resources\p2.png" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
   </ItemGroup>
 
   <ItemGroup>

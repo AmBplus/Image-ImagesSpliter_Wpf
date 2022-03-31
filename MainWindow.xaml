@@ -5,72 +5,197 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfCustomerService"
         mc:Ignorable="d"
-        Title="CustomerApp" Height="400" Width="600"
+        Title="Image Spliter" Height="570" Width="700"
         Background="AliceBlue">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Border Margin="2" Background="White" Width="250" HorizontalAlignment="Center" BorderThickness="2" BorderBrush="Gray">
+        <Border Margin="2"  Background="White" Width="250" HorizontalAlignment="Center" BorderThickness="2" BorderBrush="Gray">
             <StackPanel >
-                <Button Click="BtnHome_OnClick" Margin="20,20 , 20,10 " Background="#3e454c" Foreground="White" FontSize="18" Name="BtnHome" Height="40">Home</Button>
-                <Button Click="BtnImage_OnClick" Margin="20,10" Background="#3e454c" Foreground="White" FontSize="18" Name="BtnImage" Height="40">Image</Button>
-                <Button Click="BtnImages_OnClickges_OnClick" Margin="20,10,20,0" Background="#3e454c" Foreground="White" FontSize="18" Name="BtnImages" Height="40">File Images</Button>
-                <Image Height="146" Width="250" Source="Resources/p2.png"/>
+                <Button Click="BtnHome_OnClick" Margin="20,25 , 20,20" Background="#3e454c" Foreground="White" FontSize="18" Name="BtnHome" Height="44">Home</Button>
+                <Button Click="BtnHowUse_OnClick" Margin="20,15,20,15" Background="#3e454c" Foreground="White" FontSize="18" Name="BtnHowUse" Height="44">How Use Program</Button>
+                <Button Click="BtnImage_OnClick" Margin="20,15" Background="#3e454c" Foreground="White" FontSize="18" Name="BtnImage" Height="44">Image</Button>
+                <Button Click="BtnImages_OnClickges_OnClick" Margin="20,15,20,0" Background="#3e454c" Foreground="White" FontSize="18" Name="BtnImages" Height="44">File Images</Button>
+
+                <Image Height="217" Width="250" Source="Resources/p2.png"/>
             </StackPanel>
         </Border>
-        <Border Grid.Column="1" Margin="2" Name="BackgroundPanel" HorizontalAlignment="Stretch" BorderThickness="2" BorderBrush="Gray">
+        <Border Grid.Column="1" Margin="0,2,4,2" Name="BackgroundPanel" BorderThickness="2" BorderBrush="Gray">
             <Border.Background>
                 <ImageBrush ImageSource="/Resources/4907157.jpg"/>
             </Border.Background>
         </Border>
-       <Border Visibility="Collapsed" Grid.Column="1" Margin="2" Name="HomePanel" HorizontalAlignment="Stretch" BorderThickness="2" BorderBrush="Gray">
-           <StackPanel HorizontalAlignment="Stretch">
-            <Label FontStyle="Italic" FontSize="16" FontFamily="Times New Roman" Margin="0,50,0,0" HorizontalAlignment="Center" FontWeight="Heavy" >Wellcome To Management Application</Label>
+
+
+        <Border Visibility="Hidden" Grid.Column="1" Margin="2" Name="HomePanel" HorizontalAlignment="Stretch" BorderThickness="2" BorderBrush="Gray">
+        <StackPanel>
+            <Label FontStyle="Italic" FontSize="29"  Margin="0,35,0,0" HorizontalAlignment="Center" FontWeight="Heavy"  Height="55" Background="#00000000" Foreground="#FFCD1818" >Wellcome To Split Imager
+            </Label>
+        </StackPanel>
+        </Border>
+        <Border  Visibility="Collapsed" Grid.Column="1" Margin="2" Name="HowUsePanel" HorizontalAlignment="Stretch" BorderThickness="2" BorderBrush="Gray">
+                        <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border>
+                    <Label FontStyle="Italic" FontSize="25"  Margin="0,10,0,0" HorizontalAlignment="Center" FontWeight="Heavy"  Height="55" Background="#00000000" Foreground="#FFCD1818" >How Use This PROGRAM
+                    </Label>
+                </Border>
+                <Border Grid.Row="1">
+                    <StackPanel Margin="2">
+                        <TextBlock Margin="2" FontSize="18">About Use This Program</TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Margin="8 0 0 0">This Program Can Change Height And Width OF image Or Images</TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Margin="8 0 0 0">Select Image From left Side => this Option Can Change Height Width Of An
+                    Image , After You Enter Path Of Image And Saving Path You Can Click On Button Image Split To Split Image To Size You Want</TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Margin="8 0 0 0" >Select File Images From Left Side For Split a File Full Of Image , Like Above You Must Enter Path Of FIle And Saving Path At Last You Click On Split Images For Split Image Of File</TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Margin="8 0 0 0">Attention : IF You Don't Enter Saving Path All image Save in Program Origin Saving Folder At =>  C:Desktop/SpliterAmb</TextBlock>
+
+
+
+                    </StackPanel>
+                </Border>
+                <Border Grid.Row="2">
+                    <StackPanel Margin="3">
+                        <TextBlock TextAlignment="Right" Margin="2" FontSize="18" >نحوه استفاده از برنامه</TextBlock>
+                        <TextBlock TextAlignment="Right" TextWrapping="WrapWithOverflow" Margin="0 0 8 0">این برنامه قابلیت این را دارد که عکس یا عکس های شمارا به عرض و طول دلخواهتان تقسیم کند ، برای این منظور شما باید
+                    ابتدا از سمت چپ یکی از گزینه های عکس یا فایل عکس هارا انتخاب کنید ، بعد از آن کافیست
+                    برای استفاده از برنامه مسیر پیشنهادی برای ذخیره عکس را وارد کرده در غیر این صورت در مسیر پیش فرض ذخیره خواهد شد
+                    همچنین با انتخاب گزینه انتخاب عکس میتوانید عکس خود را انتخاب کرده و بعد از آن تعیین کنید طول و عرض عکس های جدید به
+                    چه صورت باشد ، البته اگر تعدادی عکس دارید قسمت انتخاب فایل عکس را بزنید و پوشه عکس هارا به آن بدهید بعد آن
+                    میتوانید براحتی با انتخاب اسپلیت عکس یا عکس ها آن هارا جدا سازی کنید</TextBlock>
+                        <TextBlock TextAlignment="Right" TextWrapping="WrapWithOverflow"></TextBlock>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Row="3" Margin="5,2,5,-6" >
+                    <StackPanel >
+                        <Separator></Separator>
+                        <DockPanel>
+                            <TextBlock FontSize="13">This App Created By Amb *-* NewXClassic</TextBlock>
+
+                        </DockPanel>
+                        <TextBlock>
+                      Email : <Hyperlink>
+                                  NewXclasic1@gmail.com 
+                              </Hyperlink>
+                        </TextBlock>
+                        <TextBlock>
+                            Telegram : 
+                            <Hyperlink>https://t.me/ClasicXnew</Hyperlink>
+                        </TextBlock>
+                        <TextBlock>
+                    If You Seen Any Problem Please me Tell About
+                        </TextBlock>
+                        <TextBlock>
+                    GitHubRepository : <Hyperlink>https://github.com/AmBplus/Image-ImagesSpliter_Wpf</Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+        <Border Visibility="Collapsed" Grid.Column="1" Margin="2" Name="ImagePanel" HorizontalAlignment="Stretch"  BorderThickness="2" BorderBrush="Gray">
+            <StackPanel>
+                <DockPanel Margin="10">
+                    <Label>Image Path</Label>
+                    <TextBox  Padding="0,3,0,0" Name="InputImagePathImagePanel" HorizontalAlignment="Right" Width="330"></TextBox>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Label>Save Path</Label>
+                    <TextBox Padding="0,3,0,0" Name="InputSavePathImagePanel" HorizontalAlignment="Right"  Width="330" ></TextBox>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Separator></Separator>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Label>Column</Label>
+                    <TextBox Text="1"  Padding="0,3,0,0" Name="InputColumnInputImagePanel" HorizontalAlignment="Right" Width="330" ></TextBox>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Label>Row</Label>
+                    <TextBox Text="1" Padding="0,3,0,0" Name="InputRowInputImagePanel" HorizontalAlignment="Right" Width="330" ></TextBox>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Separator></Separator>
+                </DockPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button Click="BtnOpenSaveFolderPanelImage_OnClick" Name="BtnOpenSaveFolderPanelImage" Background="Azure" FontSize="16" Margin="5" MinWidth="150" MinHeight="37" Content="Open Save Folder"></Button>
+                    <Button Click="BtnSelectSaveFolderPanelImage_OnClick" Name="BtnSelectSaveFolderPanelImage" Background="AliceBlue" FontSize="16" Margin="5" MinWidth="150" MinHeight="45" Content="Select Save Folder"></Button>
+                </WrapPanel>
+                <DockPanel Margin="10">
+                    <Separator></Separator>
+                </DockPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button Click="BtnSelectImagePanelImage_OnClick" Name="BtnSelectImagePanelImage" Background="FloralWhite" FontSize="20" Margin="5" MinWidth="150" MinHeight="37" Content="Select Image"></Button>
+                    <Button Click="BtnSplitImagePanelImage_OnClick" Name="BtnSplitImagePanelImage" FontSize="20" Margin="5" MinWidth="150" MinHeight="45" Content="Split Image">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFCAEBB2" Offset="1"/>
+                                <GradientStop Color="#FFA5FF6B" Offset="0"/>
+                                <GradientStop Color="#FF22F322"/>
+                                <GradientStop Color="#FF53DA07"/>
+                                <GradientStop Color="#FF7EEE80"/>
+                                <GradientStop Color="#FFC0EBC1" Offset="0.815"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </WrapPanel>
+                <DockPanel>
+                    <TextBlock Foreground="DarkRed"  Name="txtStatusImgPanel" FontSize="35" TextAlignment="Center" Text="..." Margin="45 25 45 25" TextWrapping="WrapWithOverflow"></TextBlock>
+                </DockPanel>
             </StackPanel>
         </Border>
-        <Border Visibility="Visible" Grid.Column="1" Margin="2" Name="ImagePanel" HorizontalAlignment="Stretch"  BorderThickness="2" BorderBrush="Gray">
-          <StackPanel>
-            <DockPanel Margin="10">
-                <Label>Image Path </Label>
-                <TextBox HorizontalAlignment="Right" MinWidth="230"></TextBox>
-            </DockPanel>
-              <DockPanel Margin="10">
-                  <Label>Save Path  </Label>
-                  <TextBox HorizontalAlignment="Right" MinWidth="230" ></TextBox>
-              </DockPanel>
-              <DockPanel Margin="10">
+        <Border Visibility="Visible" Grid.Column="1" Margin="2" Name="ImagesPanel" HorizontalAlignment="Stretch"  BorderThickness="2" BorderBrush="Gray">
+            <StackPanel>
+                <DockPanel Margin="10">
+                    <Label>Folder Image Path</Label>
+                    <TextBox Padding="0,3,0,0" Name="InputFolderImagePathPanelImages" HorizontalAlignment="Right" Width="310"></TextBox>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Label>Save Path</Label>
+                    <TextBox Padding="0,3,0,0" Name="InputSaveFolderImagePathPanelImages" HorizontalAlignment="Right" Width="310" ></TextBox>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Separator></Separator>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Label>Column</Label>
+                    <TextBox Padding="0,3,0,0" Name="InputColumnImagePanelImages" HorizontalAlignment="Right" Width="310" Text="1" ></TextBox>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Label>Row</Label>
+                    <TextBox Padding="0,3,0,0" Name="InputRowImagePanelImages" HorizontalAlignment="Right" Width="310" Text="1" ></TextBox>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Separator></Separator>
+                </DockPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button Click="BtnShowSaveFolderIms_PanelImages_OnClick" Name="BtnShowSaveFolderIms_PanelImages" Background="Azure" FontSize="16" Margin="5" MinWidth="150" MinHeight="37" Content="Open Save Folder"></Button>
+                    <Button Click="BtnSelectSaveFolderIms_PanelImages_OnClick" Name="BtnSelectSaveFolderIms_PanelImages" Background="AliceBlue" FontSize="16" Margin="5" MinWidth="150" MinHeight="45" Content="Select Save Folder"></Button>
+                </WrapPanel>
                 <Separator></Separator>
-              </DockPanel>
-              <DockPanel Margin="10">
-                  <Label>Column  </Label>
-                  <TextBox HorizontalAlignment="Right" MinWidth="230" ></TextBox>
-              </DockPanel>
-              <DockPanel Margin="10">
-                  <Label>Row  </Label>
-                  <TextBox HorizontalAlignment="Right" MinWidth="230" ></TextBox>
-              </DockPanel>
-              <DockPanel Margin="10">
-                  <Separator></Separator>
-              </DockPanel>
-              <WrapPanel HorizontalAlignment="Center">
-                  <Button Background="Azure" FontSize="16" Margin="5" MinWidth="150" MinHeight="37" Content="Open Save Folder"></Button>
-                  <Button Background="AliceBlue" FontSize="16" Margin="5" MinWidth="150" MinHeight="45" Content="Select Save Folder"></Button>
-               
-              </WrapPanel>
-              <Separator></Separator>
-              <WrapPanel HorizontalAlignment="Center">
-                  <Button Background="Azure" FontSize="16" Margin="5" MinWidth="150" MinHeight="37" Content="Select Image"></Button>
-                  <Button Background="AliceBlue" FontSize="16" Margin="5" MinWidth="150" MinHeight="45" Content="Split Image"></Button>
-                 
-              </WrapPanel>
-          </StackPanel>
+
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button Click="BtnSelectFolderIms_PanelImages_OnClick" Name="BtnSelectFolderIms_PanelImages"  Background="FloralWhite" FontSize="15" Margin="5" MinWidth="150" MinHeight="37" Content="Select Folder Images"></Button>
+                    <Button Click="BtnSplitIms_PanelImages_OnClick" Name="BtnSplitIms_PanelImages"  FontSize="15" Margin="5" MinWidth="150" MinHeight="45" Content="Split Images">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFBBFF68"/>
+                                <GradientStop Color="#FFE9FFCF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </WrapPanel>
+                <DockPanel>
+                    <TextBlock Name="txtStatusPanelImages" Foreground="DarkRed" FontSize="28" Text="..." TextAlignment="Center" Margin="45 25 45 25"></TextBlock>
+                </DockPanel>
+            </StackPanel>
         </Border>
-        <Border Visibility="Collapsed" Grid.Column="1" Margin="2" Name="ImagesPanel" HorizontalAlignment="Stretch"  BorderThickness="2" BorderBrush="Gray">
-            <Label FontSize="50" HorizontalAlignment="Center" Margin="0,50,0,0"> We Are in customer Page</Label>
-        </Border>
-    
     </Grid>
 </Window>
 <!-- oriented -> for order compents , خاصیت اورینتت برای چینش عناصر استفاده میشه-->
